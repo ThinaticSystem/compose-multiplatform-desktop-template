@@ -6,7 +6,7 @@ import org.junit.Rule
 import org.junit.Test
 import ui.MainWindowContainer
 
-class ExampleTest {
+class HelloScreenTest {
     @get:Rule
     val rule = createComposeRule()
 
