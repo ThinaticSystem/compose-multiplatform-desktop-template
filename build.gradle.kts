@@ -3,6 +3,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 plugins {
     kotlin("jvm")
     id("org.jetbrains.compose")
+    kotlin("plugin.serialization") version "1.9.10" // gradle.propertiesのkotlin.versionの値とそろえる
 }
 
 repositories {
@@ -20,6 +21,11 @@ dependencies {
 
     // Material
     implementation("org.jetbrains.compose.material3:material3-desktop:1.5.3")
+
+    // Serialization
+    "1.6.0".also { kotlinxSerializationVersion ->
+        implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationVersion")
+    }
 
     // Include the Test API
     testImplementation(compose.desktop.uiTestJUnit4)
