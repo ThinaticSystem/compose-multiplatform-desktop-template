@@ -1,7 +1,6 @@
 package ui
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Surface
@@ -11,11 +10,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.window.ApplicationScope
 import androidx.compose.ui.window.Window
+import ui.component.Center
 import ui.theme.MainTheme
 
 @Composable
@@ -39,10 +38,7 @@ fun MainWindowContainer() {
 private fun Content(modifier: Modifier = Modifier) {
     var text by remember { mutableStateOf("Hello, Desktop!") }
 
-    Box(
-        modifier = modifier.fillMaxSize(),
-        contentAlignment = Alignment.Center,
-    ) {
+    Center(modifier = modifier.fillMaxSize()) {
         Button(
             onClick = { text = "こんにちわーるど！" },
             modifier = Modifier.testTag("button"),
