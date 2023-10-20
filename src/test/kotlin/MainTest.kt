@@ -4,7 +4,7 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
 import org.junit.Rule
 import org.junit.Test
-import ui.MainWindowContent
+import ui.MainWindowContainer
 
 class ExampleTest {
     @get:Rule
@@ -13,7 +13,7 @@ class ExampleTest {
     @Test
     fun textChangesWhenButtonIsClicked() {
         rule.setContent {
-            MainWindowContent()
+            MainWindowContainer()
         }
 
         rule.onNodeWithTag("button").assertTextEquals("Hello, Desktop!")
