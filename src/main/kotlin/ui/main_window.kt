@@ -1,20 +1,12 @@
 package ui
 
 import androidx.compose.desktop.ui.tooling.preview.Preview
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Button
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.window.ApplicationScope
 import androidx.compose.ui.window.Window
-import ui.component.Center
+import cafe.adriel.voyager.navigator.Navigator
 import ui.theme.MainTheme
 
 @Composable
@@ -36,14 +28,5 @@ fun MainWindowContainer() {
 
 @Composable
 private fun Content(modifier: Modifier = Modifier) {
-    var text by remember { mutableStateOf("Hello, Desktop!") }
-
-    Center(modifier = modifier.fillMaxSize()) {
-        Button(
-            onClick = { text = "こんにちわーるど！" },
-            modifier = Modifier.testTag("button"),
-        ) {
-            Text(text = text)
-        }
-    }
+    Navigator(HelloScreen(modifier))
 }
