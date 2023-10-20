@@ -13,7 +13,7 @@ import androidx.compose.ui.platform.testTag
 import cafe.adriel.voyager.core.screen.Screen
 import ui.component.Center
 
-data class HelloScreen(val modifier: Modifier) : Screen {
+data class HelloScreen(private val modifier: Modifier) : Screen {
     @Composable
     override fun Content() {
         var text by remember { mutableStateOf("Hello, Desktop!") }

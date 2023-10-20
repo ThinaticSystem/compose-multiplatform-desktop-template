@@ -1,10 +1,12 @@
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.performClick
+import cafe.adriel.voyager.navigator.Navigator
 import org.junit.Rule
 import org.junit.Test
-import ui.MainWindowContainer
+import ui.HelloScreen
 
 class HelloScreenTest {
     @get:Rule
@@ -13,7 +15,7 @@ class HelloScreenTest {
     @Test
     fun textChangesWhenButtonIsClicked() {
         rule.setContent {
-            MainWindowContainer()
+            Navigator(HelloScreen(modifier = Modifier))
         }
 
         rule.onNodeWithTag("button").assertTextEquals("Hello, Desktop!")
