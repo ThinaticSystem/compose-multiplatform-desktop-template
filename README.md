@@ -1,6 +1,14 @@
-[![official project](http://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 # [Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform) desktop application
+
+## Thinatic Customized
+
+- [ ] with Dependency Injection (Koin?)
+- [x] with Navigation & State management ([Voyager](https://github.com/adrielcafe/voyager))
+- [x] with Material Design 3 UI
+- [x] with JSON Serialization ([kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization))
+- [ ] with Packaging resources
+- [ ] with Saving application states & user's config
 
 > **Note**
 > If you have any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
