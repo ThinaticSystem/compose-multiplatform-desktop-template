@@ -4,26 +4,31 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import cafe.adriel.voyager.core.screen.Screen
+import cafe.adriel.voyager.koin.getScreenModel
 import ui.components.Center
 
 data class HelloScreen(private val modifier: Modifier) : Screen {
     @Composable
     override fun Content() {
-        var text by remember { mutableStateOf("Hello, Desktop!") }
+        val model = this.getScreenModel<HelloScreenModel>()
+        val state by model.state.collectAsState()
 
         Center(modifier = this.modifier.fillMaxSize()) {
             Button(
-                onClick = { text = "こんにちわーるど！" },
+                onClick = { model.toggleState() },
                 modifier = Modifier.testTag("button"),
             ) {
-                Text(text = text)
+                Text(
+                    text = when (state) {
+                        is HelloScreenModel.State.Init -> "Hello, Desktop!"
+                        is HelloScreenModel.State.Second -> "こんにちわーるど！"
+                    }
+                )
             }
         }
     }
