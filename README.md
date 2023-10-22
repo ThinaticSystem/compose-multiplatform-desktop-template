@@ -1,24 +1,33 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 # [Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform) desktop application
 
 ## Thinatic Customized
 
-- [ ] with Dependency Injection (Koin?)
-- [x] with Navigation & State management ([Voyager](https://github.com/adrielcafe/voyager))
-- [x] with Material Design 3 UI
-- [x] with JSON Serialization ([kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization))
-- [ ] with Packaging resources
-- [ ] with Saving application states & user's config
+with...
+
+- [ ] Dependency Injection (Koin?)
+- [x] Navigation & State management ([Voyager](https://github.com/adrielcafe/voyager))
+- [x] Material Design 3 UI
+- [x] JSON Serialization ([kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization))
+- [ ] Network API Client ([Ktor](https://ktor.io/) Client)
+- [ ] Packaging resources
+- [ ] Saving application states & user's config
+- [ ] Logger
 
 > **Note**
-> If you have any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
+> If you have any issues, please report them
+> on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
 
 Compose for Desktop can produce applications for macOS, Linux, and Windows.
 You can use any of these platforms with our template.
 
-Follow our tutorial below to create a simple desktop application using the Compose Multiplatform UI framework.
+Follow our tutorial below to create a simple desktop application using the Compose Multiplatform UI
+framework.
 
-If you want to create an application targeting mobile platforms – iOS and Android – use the [Compose Multiplatform mobile application](https://github.com/JetBrains/compose-multiplatform-ios-android-template#readme) template.
+If you want to create an application targeting mobile platforms – iOS and Android – use
+the [Compose Multiplatform mobile application](https://github.com/JetBrains/compose-multiplatform-ios-android-template#readme)
+template.
 
 ## Before you start
 
