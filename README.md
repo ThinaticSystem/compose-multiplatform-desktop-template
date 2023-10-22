@@ -6,7 +6,7 @@
 
 with...
 
-- [ ] Dependency Injection (Koin?)
+- [x] Dependency Injection (Koin)
 - [x] Navigation & State management ([Voyager](https://github.com/adrielcafe/voyager))
 - [x] Material Design 3 UI
 - [x] JSON Serialization ([kotlinx.serialization](https://github.com/Kotlin/kotlinx.serialization))
