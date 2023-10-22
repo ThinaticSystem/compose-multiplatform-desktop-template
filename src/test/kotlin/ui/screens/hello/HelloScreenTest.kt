@@ -1,3 +1,5 @@
+@file:Suppress("NonAsciiCharacters", "TestFunctionName")
+
 package ui.screens.hello
 
 import androidx.compose.ui.Modifier
@@ -14,22 +16,26 @@ import org.koin.test.KoinTestRule
 
 class HelloScreenTest : KoinTest {
     @get:Rule
-    val rule = createComposeRule()
-
-    @get:Rule
     val koinTestRule = KoinTestRule.create {
         printLogger()
         modules(appModule())
     }
 
+    @get:Rule
+    val rule = createComposeRule()
+
     @Test
-    fun textChangesWhenButtonIsClicked() {
-        rule.setContent {
+    fun ボタンを押すとテキストが変わる() {
+        this.rule.setContent {
             Navigator(HelloScreen(modifier = Modifier))
         }
 
-        rule.onNodeWithTag("button").assertTextEquals("Hello, Desktop!")
-        rule.onNodeWithTag("button").performClick()
-        rule.onNodeWithTag("button").assertTextEquals("こんにちわーるど！")
+        this.rule.apply {
+            onNodeWithTag("button").apply {
+                assertTextEquals("Hello, Desktop!")
+                performClick()
+                assertTextEquals("こんにちわーるど！")
+            }
+        }
     }
 }
