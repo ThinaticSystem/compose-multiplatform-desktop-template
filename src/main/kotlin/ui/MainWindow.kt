@@ -7,6 +7,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.ApplicationScope
 import androidx.compose.ui.window.Window
 import cafe.adriel.voyager.navigator.Navigator
+import ui.screens.hello.HelloScreen
 import ui.theme.MainTheme
 
 @Composable
