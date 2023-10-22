@@ -3,7 +3,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 plugins {
     kotlin("jvm")
     id("org.jetbrains.compose")
-    kotlin("plugin.serialization") version "1.9.10" // gradle.propertiesのkotlin.versionの値とそろえる
+    kotlin("plugin.serialization")
 }
 
 repositories {
