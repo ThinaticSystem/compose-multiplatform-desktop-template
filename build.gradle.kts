@@ -13,6 +13,15 @@ repositories {
 }
 
 dependencies {
+    // Dependency Injection
+    //// Koin
+    val koinVersion: String by project
+    implementation("io.insert-koin:koin-core:$koinVersion")
+    testImplementation("io.insert-koin:koin-test:$koinVersion")
+    testImplementation("io.insert-koin:koin-test-junit4:$koinVersion")
+
+    // Framework
+    //// Compose Desktop
     // Note, if you develop a library, you should use compose.desktop.common.
     // compose.desktop.currentOs should be used in launcher-sourceSet
     // (in a separate module for demo project and in testMain).
@@ -25,16 +34,16 @@ dependencies {
 
     // Navigation
     //// Voyager
-    val voyagerVersion = "1.0.0-rc07"
+    val voyagerVersion: String by project
     implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
     implementation("cafe.adriel.voyager:voyager-bottom-sheet-navigator:$voyagerVersion")
     implementation("cafe.adriel.voyager:voyager-tab-navigator:$voyagerVersion")
     implementation("cafe.adriel.voyager:voyager-transitions:$voyagerVersion")
-    // implementation("cafe.adriel.voyager:voyager-koin:$voyagerVersion")
+    implementation("cafe.adriel.voyager:voyager-koin:$voyagerVersion")
 
     // Serialization
     //// kotlinx.serialization
-    val kotlinxSerializationVersion = "1.6.0"
+    val kotlinxSerializationVersion: String by project
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationVersion")
 
     // Testing
