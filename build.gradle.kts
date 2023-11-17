@@ -30,7 +30,8 @@ dependencies {
 
     // UI
     //// Material
-    implementation("org.jetbrains.compose.material3:material3-desktop:1.5.3")
+    val composeVersion: String by project
+    implementation("org.jetbrains.compose.material3:material3-desktop:$composeVersion")
 
     // Navigation
     //// Voyager
