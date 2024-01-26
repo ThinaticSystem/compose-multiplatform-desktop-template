@@ -6,6 +6,7 @@ pluginManagement {
 
     plugins {
         kotlin("jvm").version(extra["kotlin.version"] as String)
+        id("org.graalvm.buildtools.native").version(extra["graalvmNbt"] as String)
         id("org.jetbrains.compose").version(extra["composeVersion"] as String)
         kotlin("plugin.serialization").version(extra["kotlin.version"] as String)
     }

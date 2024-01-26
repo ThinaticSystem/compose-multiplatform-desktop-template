@@ -1,0 +1,21 @@
+{
+  "resources": {
+    "includes": [
+      {
+        "pattern": "\\Qjwm_x64.dll\\E"
+      },
+      {
+        "pattern": "\\Qskiko-windows-x64.dll.sha256\\E"
+      }
+    ]
+  },
+  "bundles": [
+    {
+      "name": "sun.awt.resources.awt",
+      "classNames": [
+        "sun.awt.resources.awt",
+        "sun.awt.resources.awt_ja"
+      ]
+    }
+  ]
+}

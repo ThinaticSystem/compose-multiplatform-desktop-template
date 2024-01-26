@@ -1,6 +1,6 @@
-import androidx.compose.ui.window.application
+import io.github.humbleui.jwm.App
 import org.koin.core.context.startKoin
-import ui.MainWindow
+import ui.mainWindow
 
 fun main() {
     // DIの構成
@@ -10,7 +10,7 @@ fun main() {
         modules(appModule())
     }
 
-    application {
-        MainWindow()
+    App.start {
+        mainWindow()
     }
 }

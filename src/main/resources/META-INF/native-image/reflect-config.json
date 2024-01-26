@@ -1,0 +1,353 @@
+[
+  {
+    "name": "android.os.Build$VERSION"
+  },
+  {
+    "name": "club.eridani.compose.jwm.ApplicationWindow$container$1",
+    "methods": [
+      {
+        "name": "coalesceEvents",
+        "parameterTypes": [
+          "java.awt.AWTEvent",
+          "java.awt.AWTEvent"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "java.security.SecureRandomParameters"
+  },
+  {
+    "name": "java.util.concurrent.atomic.AtomicBoolean",
+    "fields": [
+      {
+        "name": "value"
+      }
+    ]
+  },
+  {
+    "name": "java.util.concurrent.atomic.AtomicReference",
+    "fields": [
+      {
+        "name": "value"
+      }
+    ]
+  },
+  {
+    "name": "kotlin.coroutines.SafeContinuation",
+    "fields": [
+      {
+        "name": "result"
+      }
+    ]
+  },
+  {
+    "name": "kotlin.reflect.jvm.internal.ReflectionFactoryImpl"
+  },
+  {
+    "name": "kotlinx.coroutines.CancellableContinuationImpl",
+    "fields": [
+      {
+        "name": "_decisionAndIndex"
+      },
+      {
+        "name": "_parentHandle"
+      },
+      {
+        "name": "_state"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.CancelledContinuation",
+    "fields": [
+      {
+        "name": "_resumed"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.CompletedExceptionally",
+    "fields": [
+      {
+        "name": "_handled"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.EventLoopImplBase",
+    "fields": [
+      {
+        "name": "_delayed"
+      },
+      {
+        "name": "_isCompleted"
+      },
+      {
+        "name": "_queue"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.JobSupport",
+    "fields": [
+      {
+        "name": "_parentHandle"
+      },
+      {
+        "name": "_state"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.JobSupport$Finishing",
+    "fields": [
+      {
+        "name": "_exceptionsHolder"
+      },
+      {
+        "name": "_isCompleting"
+      },
+      {
+        "name": "_rootCause"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.channels.BufferedChannel",
+    "fields": [
+      {
+        "name": "_closeCause"
+      },
+      {
+        "name": "bufferEnd"
+      },
+      {
+        "name": "bufferEndSegment"
+      },
+      {
+        "name": "closeHandler"
+      },
+      {
+        "name": "completedExpandBuffersAndPauseFlag"
+      },
+      {
+        "name": "receiveSegment"
+      },
+      {
+        "name": "receivers"
+      },
+      {
+        "name": "sendSegment"
+      },
+      {
+        "name": "sendersAndCloseStatus"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.flow.StateFlowImpl",
+    "fields": [
+      {
+        "name": "_state"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.flow.StateFlowSlot",
+    "fields": [
+      {
+        "name": "_state"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.internal.AtomicOp",
+    "fields": [
+      {
+        "name": "_consensus"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.internal.ConcurrentLinkedListNode",
+    "fields": [
+      {
+        "name": "_next"
+      },
+      {
+        "name": "_prev"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.internal.DispatchedContinuation",
+    "fields": [
+      {
+        "name": "_reusableCancellableContinuation"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.internal.LimitedDispatcher",
+    "fields": [
+      {
+        "name": "runningWorkers"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.internal.LockFreeLinkedListNode",
+    "fields": [
+      {
+        "name": "_next"
+      },
+      {
+        "name": "_prev"
+      },
+      {
+        "name": "_removedRef"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.internal.LockFreeTaskQueue",
+    "fields": [
+      {
+        "name": "_cur"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.internal.LockFreeTaskQueueCore",
+    "fields": [
+      {
+        "name": "_next"
+      },
+      {
+        "name": "_state"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.internal.Segment",
+    "fields": [
+      {
+        "name": "cleanedAndPointers"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.internal.ThreadSafeHeap",
+    "fields": [
+      {
+        "name": "_size"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.scheduling.CoroutineScheduler",
+    "fields": [
+      {
+        "name": "_isTerminated"
+      },
+      {
+        "name": "controlState"
+      },
+      {
+        "name": "parkedWorkersStack"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.scheduling.CoroutineScheduler$Worker",
+    "fields": [
+      {
+        "name": "workerCtl"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.scheduling.WorkQueue",
+    "fields": [
+      {
+        "name": "blockingTasksInBuffer"
+      },
+      {
+        "name": "consumerIndex"
+      },
+      {
+        "name": "lastScheduledTask"
+      },
+      {
+        "name": "producerIndex"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.sync.MutexImpl",
+    "fields": [
+      {
+        "name": "owner"
+      }
+    ]
+  },
+  {
+    "name": "kotlinx.coroutines.sync.SemaphoreImpl",
+    "fields": [
+      {
+        "name": "_availablePermits"
+      },
+      {
+        "name": "deqIdx"
+      },
+      {
+        "name": "enqIdx"
+      },
+      {
+        "name": "head"
+      },
+      {
+        "name": "tail"
+      }
+    ]
+  },
+  {
+    "name": "sun.java2d.marlin.DMarlinRenderingEngine",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "sun.security.provider.DRBG",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": [
+          "java.security.SecureRandomParameters"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "sun.security.provider.SHA",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  },
+  {
+    "name": "sun.security.provider.SHA2$SHA256",
+    "methods": [
+      {
+        "name": "<init>",
+        "parameterTypes": []
+      }
+    ]
+  }
+]

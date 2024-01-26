@@ -2,6 +2,7 @@ import org.jetbrains.compose.desktop.application.dsl.TargetFormat
 
 plugins {
     kotlin("jvm")
+    id("org.graalvm.buildtools.native")
     id("org.jetbrains.compose")
     kotlin("plugin.serialization")
 }
@@ -29,6 +30,10 @@ dependencies {
     implementation(compose.desktop.currentOs)
 
     // UI
+    //// Window Manager
+    val jwmVersion: String by project
+    implementation("io.github.humbleui:jwm:$jwmVersion")
+
     //// Material
     val composeVersion: String by project
     implementation("org.jetbrains.compose.material3:material3-desktop:$composeVersion")
@@ -51,9 +56,31 @@ dependencies {
     testImplementation(compose.desktop.uiTestJUnit4)
 }
 
+val entryPointClassName = "MainKt"
+
+graalvmNative {
+    toolchainDetection.set(false)
+    binaries {
+        named("main") {
+            mainClass.set(entryPointClassName)
+            buildArgs("-Djava.awt.headless=false")
+        }
+    }
+
+    agent {
+        defaultMode.set("standard")
+
+        metadataCopy {
+            inputTaskNames.add("run") // Tasks previously executed with the agent attached.
+            outputDirectories.add("src/main/resources/META-INF/native-image")
+            mergeWithExisting.set(true)
+        }
+    }
+}
+
 compose.desktop {
     application {
-        mainClass = "MainKt"
+        mainClass = entryPointClassName
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)

@@ -4,15 +4,16 @@ import androidx.compose.desktop.ui.tooling.preview.Preview
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.window.ApplicationScope
-import androidx.compose.ui.window.Window
 import cafe.adriel.voyager.navigator.Navigator
+import club.eridani.compose.jwm.ApplicationWindow
 import ui.screens.hello.HelloScreen
 import ui.theme.MainTheme
+import kotlin.system.exitProcess
 
-@Composable
-fun ApplicationScope.MainWindow() {
-    Window(onCloseRequest = ::exitApplication) {
+fun mainWindow() {
+    ApplicationWindow(
+        onClose = { exitProcess(0) },
+    ) {
         MainWindowContainer()
     }
 }
