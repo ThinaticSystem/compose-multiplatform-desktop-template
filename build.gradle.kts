@@ -48,6 +48,10 @@ dependencies {
     val kotlinxSerializationVersion: String by project
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerializationVersion")
 
+    // Credential Store
+    val credentialSecureStorageVersion: String by project
+    implementation("com.microsoft:credential-secure-storage:$credentialSecureStorageVersion")
+
     // Testing
     testImplementation(compose.desktop.uiTestJUnit4)
 }
