@@ -27,6 +27,9 @@ dependencies {
     // (in a separate module for demo project and in testMain).
     // With compose.desktop.common you will also lose @Preview functionality
     implementation(compose.desktop.currentOs)
+    //// Coroutines for Swing
+    val coroutinesSwingVersion: String by project
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-swing:$coroutinesSwingVersion")
 
     // UI
     //// Material
